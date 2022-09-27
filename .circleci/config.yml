@@ -34,14 +34,6 @@ jobs:
           name: Frontend install and Build
           command: |
             npm run frontend:build
-      - run:
-          name: Backend Deploy
-          command: |
-            npm run api:deploy
-      - run:
-          name: Frontend Deploy
-          command: |
-            npm run frontend:deploy
   # deploy step will run only after manual approval
   deploy:
     docker:
@@ -61,7 +53,7 @@ jobs:
           name: Frontend Deploy
           command: |
             npm run frontend:deploy
-            
+
 workflows:
   udagram:
     jobs:
