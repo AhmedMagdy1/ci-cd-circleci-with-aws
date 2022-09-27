@@ -1,14 +1,14 @@
 branch-defaults:
   default:
-    environment: Final11-env
+    environment: new-backed-prod
 deploy:
   artifact: www/Archive.zip
 environment-defaults:
-  Final11-env:
+  new-backed-prod:
     branch: null
     repository: null
 global:
-  application_name: Final11
+  application_name: new-backed
   default_ec2_keyname: null
   default_platform: Node.js 14 running on 64bit Amazon Linux 2
   default_region: us-east-1
