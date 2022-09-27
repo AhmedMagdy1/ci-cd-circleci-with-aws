@@ -25,15 +25,7 @@ jobs:
             echo $(npm --version)
             npm run frontend:install
       # TODO: Install dependencies in the the backend API
-      - run:
-          name: install pip
-          command: |
-            sudo apt update
-            sudo apt install -y python-pip python-dev   
-      - run:
-          name: Install AWS dependencies
-          command: |
-            sudo pip install awsebcli
+                
       - run:
           name: Backend install and Build
           command: |
