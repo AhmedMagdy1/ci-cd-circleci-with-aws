@@ -12,7 +12,7 @@
     "dev": "npx ts-node-dev --respawn --transpileOnly ./src/server.ts",
     "prod": "npx tsc && node server.js",
     "clean": "rm -rf www/ || true",
-    "deploy": "npm run build && eb list && eb use new-backed-prod && eb setenv POSTGRES_USERNAME=postgres POSTGRES_PASSWORD=ahmedmagdy123 POSTGRES_DB=final11 PORT=3000 URL=http://new-backed-prod.us-east-1.elasticbeanstalk.com/ DB_PORT=5432 POSTGRES_HOST=Database-1.cqudd9ra1kwp.us-east-1.rds.amazonaws.com JWT_SECRET=secret AWS_DEFAULT_REGION=us-east-1 && eb deploy",
+    "deploy": "npm run build && eb list && eb use M2gdi-env && eb setenv POSTGRES_USERNAME=postgres POSTGRES_DB=magdi PORT=3000 URL=http://m2gdi-env.eba-5ncsirv8.us-east-1.elasticbeanstalk.com/ DB_PORT=5432 POSTGRES_HOST=magdi.cmd5gl0ggdvg.us-east-1.rds.amazonaws.com JWT_SECRET=secret AWS_DEFAULT_REGION=us-east-1 && eb deploy",
     "build": "rm -rf node_modules && npm cache clean --force && npm install . && npm run clean && tsc && cp -rf src/config www/config && cp -R .elasticbeanstalk www/.elasticbeanstalk && cp .npmrc www/.npmrc && cp package.json www/package.json && cd www && zip -r Archive.zip . && ls -la && cd .. && ls -la",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

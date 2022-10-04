@@ -1,14 +1,14 @@
 branch-defaults:
   default:
-    environment: new-backed-prod
+    environment: M2gdi-env
 deploy:
   artifact: www/Archive.zip
 environment-defaults:
-  new-backed-prod:
+  M2gdi-env:
     branch: null
     repository: null
 global:
-  application_name: new-backed
+  application_name: m2gdi
   default_ec2_keyname: null
   default_platform: Node.js 14 running on 64bit Amazon Linux 2
   default_region: us-east-1
